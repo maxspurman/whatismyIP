@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Analyse</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div id="startScreen" class="start-screen">
+            <div class="intro-box">
+                <p class="eyebrow">NETZWERK- UND SYSTEMANALYSE</p>
+
+                <h1>Ihre Verbindung im Überblick</h1>
+
+                <p class="intro-text">
+                    Dieses Tool analysiert Ihre aktuelle Internetverbindung und zeigt Ihnen
+                    die wichtigsten öffentlich erkennbaren Informationen Ihres Systems an.
+                </p>
+
+                <div class="feature-list">
+                    <div class="feature-item">› Öffentliche IPv4-Adresse</div>
+                    <div class="feature-item">› Verfügbare IPv6-Adresse</div>
+                    <div class="feature-item">› Betriebssystem mit Version</div>
+                    <div class="feature-item">› Browser mit Version</div>
+                    <div class="feature-item">› Land und Stadt</div>
+                </div>
+
+                <p class="intro-note">
+                    Es werden nur die für Webseiten sichtbar übermittelten Verbindungsdaten
+                    ausgewertet.
+                </p>
+
+                <button onclick="startScan()">SCAN STARTEN</button>
+            </div>
+        </div>
+
+        <h1 id="scanTitle" style="display:none;">> INITIALISIERE NETZWERK-SCAN...</h1>
+
+        <div id="status" class="status" style="display:none;"></div>
+
+        <div class="result" id="result" style="display:none;">
+            <div class="block">
+                <p>Ihre IP-Adresse lautet:</p>
+                <h2 id="ip"></h2>
+            </div>
+
+            <div class="block">
+                <p>Ihre IPv6-Adresse lautet:</p>
+                <h2 id="ipv6"></h2>
+            </div>
+
+            <div class="block">
+                <p>Ihr Betriebssystem:</p>
+                <h2 id="os"></h2>
+            </div>
+
+            <div class="block">
+                <p>Ihr Browser:</p>
+                <h2 id="browser"></h2>
+            </div>
+
+            <div class="block">
+                <p>Ihr Land:</p>
+                <h2 id="country"></h2>
+            </div>
+
+            <div class="block">
+                <p>Ihre Stadt:</p>
+                <h2 id="city"></h2>
+            </div>
+        </div>
+
+        <button id="reloadBtn" onclick="reloadData()" style="display:none;">
+            SCAN ERNEUT
+        </button>
+
+        <p class="disclaimer">
+            (Der Seitenbetreiber gibt keine Gewähr auf die Angabe und deren Korrektheit.)
+        </p>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
