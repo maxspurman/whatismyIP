@@ -22,6 +22,7 @@ A simple web app that shows publicly visible connection and system information.
 ```bash
 pip install -r requirements.txt
 python app.py
+```
 
 Open in browser:
 
